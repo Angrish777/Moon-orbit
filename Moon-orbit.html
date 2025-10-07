@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth and Moon Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .solar-system {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+
+        .earth {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle at 30% 30%, #4a90e2, #2563eb, #1e3a8a);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: earth-spin 4s linear infinite;
+            box-shadow: 
+                0 0 30px rgba(37, 99, 235, 0.6),
+                inset -20px -20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .earth::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%);
+            animation: earth-highlight 4s linear infinite;
+        }
+
+        .moon-orbit {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: moon-orbit 6s linear infinite;
+        }
+
+        .moon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle at 25% 25%, #ffd700, #ffed4e, #fbbf24);
+            border-radius: 50%;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: moon-spin 2s linear infinite;
+            box-shadow: 
+                0 0 20px rgba(255, 215, 0, 0.8),
+                0 0 40px rgba(255, 215, 0, 0.4),
+                0 0 60px rgba(255, 215, 0, 0.2);
+        }
+
+        .moon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.6), transparent 70%);
+        }
+
+     
+
+        @keyframes earth-spin {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes earth-highlight {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes moon-orbit {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes moon-spin {
+            from {
+                transform: translateX(-50%) rotate(0deg);
+            }
+            to {
+                transform: translateX(-50%) rotate(360deg);
+            }
+        }
+
+        @keyframes stars-twinkle {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        .title {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="title"><h1>Moon's Orbit</h1></div>
+    <div class="solar-system">
+        <div class="earth"></div>
+        <div class="moon-orbit">
+            <div class="moon"></div>
+        </div>
+    </div>
+</body>
+</html>

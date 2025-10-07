@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Profile Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f2f8;
+      min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .card {
+      max-width: 500px;
+      width: 100%;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 32px;
+      margin: auto;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 28px;
+      flex-shrink: 0;
+      border: 4px solid #0077ff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+    }
+    .info h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 12px 0;
+      color: #222;
+    }
+    .info p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: block;
+      gap: 18px;
+      justify-content: center;
+      width: 90%;
+    }
+    .btn {
+      background: #0077ff;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      text-decoration: none;
+      font-size: 1rem;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background 0.18s, opacity 0.18s;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      margin: auto;
+      display: block;
+      width:90%;
+    }
+    .btn:hover {
+      background: #005dc1;
+      opacity: 0.9;
+    }
+    @media (max-width: 640px) {
+      .card {
+        flex-direction: column;
+        max-width: 70vw;
+        padding: 16px;
+        align-items: center;
+      }
+      .profile-img {
+        width: 110px;
+        height: 110px;
+        margin: 0 0 20px 0;
+      }
+      .info {
+        padding: 0;
+        width: 100%;
+        align-items: center;
+      }
+      .buttons {
+        flex-direction: column;
+        gap: 14px;
+        width: 90%;
+        display:block;
+        margin: auto;
+
+        align-items: center;
+      }
+      .btn {
+        width: 90%;
+        display: block;
+        margin: auto;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="https://thumbs.dreamstime.com/b/adolf-hitler-portrait-painted-b-jackobs-image-book-bilder-aus-dem-leben-des-f%C3%BChrers-adolf-hitler-portrait-painted-183308284.jpg?w=768" alt="Me" class="profile-img">
+    <div class="info">
+      <h2>Aaditye Angrish</h2>
+      <p>I am a passionate individual on a journey to become a skilled full stack developer. I approaches every challenge with enthusiasm and am committed to mastering both frontend and backend technologies.</p>
+      <div class="buttons">
+        <a href="mailto:aaditye.25bcs10739@sst.scaler.com" class="btn">Contact</a></br>
+        <a href="https://aaditye_angrish.dev" class="btn" target="_blank">Portfolio</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

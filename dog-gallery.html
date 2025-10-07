@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Gallery</title>
+  <style>
+    .container {
+      background-color: beige;
+      height: 900px;
+      width: 900px;
+      padding: 20px;
+      display: grid;
+      gap: 15px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .box {
+      border-radius: 8px;
+      box-shadow: rgb(88, 86, 86) 2px 2px 8px;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+    .box:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 8px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+    .box:hover img {
+      transform: scale(0.95);
+    }
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Dog Gallery</h2>
+  <div class="container">
+    <div class="box"><img src="https://www.shutterstock.com/image-photo/amazing-portrait-young-crossbreed-dog-600nw-706603864.jpg" alt="Dog 1"></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS58NJALRfYbVBsnOG-z8Z0k57MwdYz9AbQ7w&s" alt="Dog 2"></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcN08wg_t1TqQmxpEwo8-iYYJM2_mj1y4gng&s" alt="Dog 3"></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdG-JQx02iZMtOhXfYuLEJAhTm1gR2Cyw1rQ&s" alt="Dog 4"></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvEqOFoiXE7rabXopXzzs3tNWiOndq3Cn3Sg&s" alt="Dog 5"></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsF6oWxXqmP0RtcshhrUVmS5dcYU0RlfDPwA&s" alt="Dog 6"></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsdCwmZpDZiQZLntIOOhwuQfmtQDrzJyOuvQ&s" alt="Dog 7"></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFWX0jukNO-D46aG73I6Yz4UzbDN_jNmnVDQ&s" alt="Dog 8"></div>
+    <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLLfHey05kt2opnIxPab567EYIi8TgLc6ktA&s" alt="Dog 9"></div>
+  </div>
+</body>
+</html>
